@@ -1,17 +1,16 @@
 {
 	"name": "Правильный JavaScript",
-	"description": "Рассказ о том, как в JavaScript стали использовать ООП, почему это плохо и
-как с этим мириться. А также о том, как на JS программировать прототипами, модулями и миксинами.",
-	"sections": [
-	    "section": "intro",
-		"section": "poll",
-		"section": "quick-oop-intro",
-		"section": "why-prototypes-better",
-		"section": "objects-in-js-and-having-fun",
-		"section": "functional-style",
-		"section": "modules-approach",
-		"section": "from-object-to-prototypes",
-		"section": "mixins",
-		"section": "bonus-coffeescript-vs-dart"
+	"description": "Рассказ о том, как в JavaScript стали использовать ООП, почему это плохо и как с этим мириться. А также о том, как на JS программировать прототипами, модулями и миксинами.",
+	"sections": [ 
+	    "intro",
+		"poll",
+		"quick-oop-intro",
+		"why-prototypes-better",
+		"objects-in-js-and-having-fun",
+		"functional-style",
+		"modules-approach",
+		"from-object-to-prototypes",
+		"mixins",
+		"bonus-coffeescript-vs-dart"
 	]
 }
