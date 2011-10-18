@@ -19,12 +19,17 @@
 * Веду блог [«Ни слова о луке»](http://shamansir-ru.tumblr.com)
 * Опытный Жабоскриптёр
 * Нет, правда
+* И ещё [я есть на гитхабе](http://shamansir.github.com)
+
+![Poolparty](poolparty.png)
+
+<span class="legal-copy">Poolparty smile is the property of Skype Inc.</a>
 
 <!SLIDE bullets incremental transition=uncover>
 
-# Расскажу про #
+# Расскажу #
 
-* ООП в JavaScript
+* Пару слов об ООП
 * (и почему это не всегда хорошо)
 * Почему прототипы лучше
 * Как развлекаться с объектами в JS
