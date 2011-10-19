@@ -7,9 +7,8 @@
 		"quick-oop-intro",
 		"why-prototypes-better",
 		"functional-style",
-		"modules-approach",	
-		"from-object-to-prototypes",
+		"modules-approach",
 		"mixins",
-		"bonus-coffeescript-vs-dart"
+		"bonus"
 	]
 }

@@ -61,7 +61,7 @@
 
 # TIMTOWTDY #
 
-(There Is More Than One Way To Do It)
+(Есть больше одного способа сделать это)
 
 <!SLIDE transition=uncover>
 
@@ -75,7 +75,15 @@
     var vasya = Object.create(petya);
     vasya.name = 'Вася';
     vasya.greet();
-    > 'Я – Вася' 
+    > 'Я – Вася'
+    
+<!SLIDE transition=uncover>
+
+# Fork and change #
+
+(UNIX, GitHub, ...)
+
+[Вилка и гнутая вилка](fork-and-modified-fork.png)    
 
 <!SLIDE transition=uncover>
 
@@ -85,7 +93,7 @@
     var cat = function(subtype) {
     	return {
     		type: subtype || 'кошка',
-    		identify: function() {
+    		identify: function() { // создаётся для каждого клона 
 	    		console.log('Я – ' + this.type); }
     	};
     }
@@ -121,29 +129,71 @@
 .notes Если мы всё же решили наследовать осьмикошек. Кстати, так работает instanceof
 
     @@@javascript
-    function cat() {
+    function cat(type) {
         this.type = 'cat';
     }
     cat.prototype = {
-      react: function(who) { 
+      react: function(who) { // одна и та же функция для всех клонов
 	           console.log(this.type + ' reacts on ' + who); }
     };
 
     function octocat() {}
-
     octocat.prototype = new cat();
+    octocat.prototype.constructor = octocat; // вызвать cat.call(this, args) при создании
+
     octocat.prototype.type = 'octocat'; // не атрибут конструктора
-    octocat.prototype.tentacles = 6;
-    octocat.prototype.constructor = octocat;
+    octocat.prototype.tentacles = 6;    
 
     var superoctocat = new octocat();
     superoctocat.tentacles = 8;
-    superoctocat instanceof cat
+    superoctocat instanceof cat;
     > true
+    superoctocat.type
+
+<!SLIDE transition=uncover>
+
+    superoctocat [instance of octocat]
+        octocat.prototype [instance of cat] 
+               { type: 'octocat' }
+            cat.prototype
+                { react: ... }
+                Object.prototype
+                       { toString: ... /* и т.д. */ }
+
+<span class="legal-copy">Modified from http://bonsaiden.github.com/JavaScript-Garden/#object.prototype</span>                
 
 <!SLIDE bullets incremental transition=uncover>
 
+   Для работы с прототипами нужны:
+
+   * Функция, которая конструирует объект
+   * Прототип (клонируемое), который содержится в сконструированном объекте (или наполняется позже)
+   * Она же становится конструктором
+
+<!SLIDE transition=uncover>
+
+.notes Программисты очень не хотят использовать имя родительского класса и заводят свои обёртки
+
+Сложности начинаются, когда оказывается нужен `super`:
+
+    @@@javascript
+    octocat.prototype.react=function(who){ 
+	    cat.prototype.react.call(this, who); // вспомните self
+	    console.log('Перехвачено в octocat');
+    }
+
+<!SLIDE transition=uncover>
+
+Но `super` не имеет смысла, если мы *клонируем*
+
+<!SLIDE bullets incremental transition=uncover>
+
+.notes Именно прикручивание ООП внесло в JS много костылей. Не забывайте оператор `new` и вам не нужно будет костылей
+
 Кстати...
 
-* В первых двух примерах `instanceof` не работает
-* но зачем он, если есть *Duck Typing*
+* функция – тоже объект с прототипом
+* не забывайте оператор `new`
+* `this` указывает на функцию, если не указано явно
+* в первых двух примерах `instanceof` тоже не работает
+* но зачем нам он вообще, если есть *Duck Typing*
