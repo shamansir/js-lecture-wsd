@@ -47,4 +47,10 @@
 
 <!SLIDE transition=uncover>
 
+## У меня полчаса, поэтому очень сжато ##
+
+(но не в ущерб шоу и смыслу)
+
+<!SLIDE transition=uncover>
+
 # Итак, начали #

@@ -42,11 +42,48 @@
 
 <!SLIDE transition=uncover>
 
-Как это выглядит в JavaScript?
+# Как это выглядит в JavaScript? #
 
     @@@javascript
-    function Animal { ... }
+    function Animal(type) {
+        this.type = type;
+	}
+
+    Animal.prototype.meet = function(other) {
+        return this.type + ' meets ' + other.type + '.' 
+    }
+
+    function Cat() {
+    	Cat.superclass.constructor.apply(this, 'Cat');
+    }
+    var F = function() { }
+    F.prototype = Animal.prototype
+    Cat.prototype = new F()
+    Cat.prototype.constructor = Cat
+    Cat.superclass = Animal.prototype
+
+    function Dog() {
+    	Dog.superclass.constructor.apply(this, 'Dog');
+    }
+    var F = function() { }
+    F.prototype = Animal.prototype
+    Dog.prototype = new F()
+    Dog.prototype.constructor = Cat
+    Dog.superclass = Animal.prototype
+
+    var cat = new Cat('Cat');
+    var dog = new Animal('Dog');
+    cat.react(dog);
+    > Cat meets Dog
 
 <!SLIDE transition=uncover>
 
-# Но что, если у нас есть редкий экземпляр?.. #
+.notes Плохо, потому что не то
+
+# ОЧЕНЬ ПЛОХО, правда? #
+
+(хоть и можно обернуть в функцию)
+
+<!SLIDE transition=uncover>
+
+Но что, если у нас есть необычное животное?
