@@ -59,7 +59,9 @@
 
 <!SLIDE transition=uncover>
 
-TIMTOWTDY
+# TIMTOWTDY #
+
+(There Is More Than One Way To Do It)
 
 <!SLIDE transition=uncover>
 
@@ -67,34 +69,34 @@ TIMTOWTDY
 
     @@@javascript
     var petya = Object.create(null); // или Object.create();
-    petya.name = 'Petya';
-    petya.greet = function() { console.log('I am ' + this.name); }
+    petya.name = 'Петя';
+    petya.greet = function() { console.log('Я – ' + this.name); }
 
     var vasya = Object.create(petya);
-    vasya.name = 'Vasya';
+    vasya.name = 'Вася';
     vasya.greet();
-    > 'I am Vasya' 
+    > 'Я – Вася' 
 
 <!SLIDE transition=uncover>
 
-.note Фабрика кошек (но не осьмикощек, мы не планируем их наследовать, не будем преумножать сущности).
+.notes Фабрика кошек (но не осьмикошек, мы не планируем их наследовать, не будем преумножать сущности).
 
     @@@javascript
     var cat = function(subtype) {
     	return {
-    		type: subtype || 'cat',
+    		type: subtype || 'кошка',
     		identify: function() {
-	    		console.log('My type is ' + this.type); }
+	    		console.log('Я – ' + this.type); }
     	};
     }
 
-    var octocat = new cat('octocat');
+    var octocat = new cat('осьмикошка');
     octocat.identify();
-    > 'My type is octocat'
+    > 'Я – осьмикошка'
 
 <!SLIDE transition=uncover>
 
-Не надо преумножать сущности
+## Не надо преумножать сущности ##
 
 <!SLIDE transition=uncover> 
 
@@ -104,14 +106,14 @@ TIMTOWTDY
     var cat = function(subtype) {
     	return {
     		...
-    		meow: function() {console.log('meow');}
+    		fear: function() {console.log('ШШШШШШ!');}
     	};
     }
 
-    var octocat = new cat('octocat');
-    octocat.meow = function() { throw new Error('I am not a simple cat!'); };
-    // или octocat.meow = undefined;
-    octocat.meow();
+    var octocat = new cat('осьмикошка');
+    octocat.fear = function() { throw new Error('Я не просто кошка!'); };
+    // или octocat.fear = undefined;
+    octocat.fear();
     > Error
 
 <!SLIDE transition=uncover>
@@ -130,7 +132,7 @@ TIMTOWTDY
     function octocat() {}
 
     octocat.prototype = new cat();
-    octocat.prototype.type = 'octocat';
+    octocat.prototype.type = 'octocat'; // не атрибут конструктора
     octocat.prototype.tentacles = 6;
     octocat.prototype.constructor = octocat;
 
@@ -141,6 +143,7 @@ TIMTOWTDY
 
 <!SLIDE bullets incremental transition=uncover>
 
-* Кстати...
+Кстати...
+
 * В первых двух примерах `instanceof` не работает
-* но зачем он, если есть *Duck Typing*  
+* но зачем он, если есть *Duck Typing*
