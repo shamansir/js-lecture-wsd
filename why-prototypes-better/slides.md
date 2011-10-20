@@ -65,96 +65,187 @@
 
 <!SLIDE transition=uncover>
 
-.notes Намеренно использую маленькую букву - это экземпляры
+.notes Object.create - нововведённая функция, есть не везде. Намеренно использую маленькую букву - это экземпляры
 
     @@@javascript
     var petya = Object.create(null); // или Object.create();
     petya.name = 'Петя';
     petya.greet = function() { console.log('Я – ' + this.name); }
 
-    var vasya = Object.create(petya);
+    var vasya = Object.create(petya); // NB: тоже копируются ссылки!
     vasya.name = 'Вася';
     vasya.greet();
     > 'Я – Вася'
     
 <!SLIDE transition=uncover>
 
+[Вилка и гнутая вилка](fork-and-modified-fork.png)
+
+<!SLIDE transition=uncover>
+
 # Fork and change #
 
 (UNIX, GitHub, ...)
 
-[Вилка и гнутая вилка](fork-and-modified-fork.png)    
+[Ветви @ Меняй](fork-and-change.png)
 
 <!SLIDE transition=uncover>
 
-.notes Фабрика кошек (но не осьмикошек, мы не планируем их наследовать, не будем преумножать сущности).
+.notes Фабрика кошек (но не осьмикошек, мы не планируем их наследовать, не будем преумножать сущности). Маруся - тёплое ламповое имя для кошки. Буэ – франзуское.
 
     @@@javascript
-    var cat = function(subtype) {
+    var cat = function(cname) {
     	return {
-    		type: subtype || 'кошка',
+    		name: cname || 'Маруся', // новое для каждого клона
     		identify: function() { // создаётся для каждого клона 
-	    		console.log('Я – ' + this.type); }
+	    		console.log('Я – ' + this.name); }
     	};
     }
 
-    var octocat = new cat('осьмикошка');
+    var octocat = new cat('Буэ');
     octocat.identify();
-    > 'Я – осьмикошка'
+    > 'Я – Буэ'
 
 <!SLIDE transition=uncover>
 
-## Не надо преумножать сущности ##
+.notes Чуть более правильный вариант
 
-<!SLIDE transition=uncover> 
+    @@@javascript
+    var catProto = {
+    		name: 'Маруся', // одно на всех
+    		identify: function() { // одна на всех
+	    		console.log('Я – ' + this.name); }
+    	};
+
+    var cat = function(cname) { this.name = cname; };
+    cat.prototype = catProto;
+
+    var octocat = new cat('Буэ'); // "Создать по прототипу"
+    octocat.identify();
+    > 'Я – Буэ'
+
+<!-- <!SLIDE transition=uncover> 
 
 .notes Если мы хотим что-то запретить
 
     @@@javascript
-    var cat = function(subtype) {
-    	return {
+    var catProto = {
     		...
     		fear: function() {console.log('ШШШШШШ!');}
     	};
-    }
 
-    var octocat = new cat('осьмикошка');
+    . . .
+
+    var octocat = new cat('Буэ');
     octocat.fear = function() { throw new Error('Я не просто кошка!'); };
     // или octocat.fear = undefined;
     octocat.fear();
-    > Error
+    > Error -->
 
 <!SLIDE transition=uncover>
 
-.notes Если мы всё же решили наследовать осьмикошек. Кстати, так работает instanceof
+.notes Если мы всё же решили наследовать осьмикошек. Псевдоклассическое наследование. присвоение prototype.constructor не влияет на `instanceof`, это заблуждение. Свойство `constructor` копируется между всеми экземплярами, созданными от данной функции
 
     @@@javascript
-    function cat(type) {
-        this.type = 'cat';
+    function cat(name) { // динамика
+        this.name = name || 'Маруся'; // своё (новое) имя у каждого клона
+        this.kittens = [];
     }
-    cat.prototype = {
-      react: function(who) { // одна и та же функция для всех клонов
-	           console.log(this.type + ' reacts on ' + who); }
+    cat.prototype = { // статика
+        react: function(who) { // одна и та же функция для всех клонов
+	           console.log(this.name + ' реагирует на ' + who); }
+
     };
 
-    function octocat() {}
-    octocat.prototype = new cat();
-    octocat.prototype.constructor = octocat; // вызвать cat.call(this, args) при создании
+    function octocat() {} 
+    octocat.prototype = new cat(); // клонируем...
+    octocat.prototype.constructor = octocat;  // необязательно: в прошлой строке 
+                      // изменили конструктор на `cat`, исправляем
+                      // + возможность вызвать из потомков
 
-    octocat.prototype.type = 'octocat'; // не атрибут конструктора
-    octocat.prototype.tentacles = 6;    
+    // ...и изменяем
+    octocat.prototype.name = 'Буэ'; // одно и то же свойство у каждого клона
+    octocat.prototype.tentacles = 6;
 
-    var superoctocat = new octocat();
+    var superoctocat = new octocat(); // клонируем...
+    superoctocat.tentacles = 8; // ...и изменяем
+    superoctocat instanceof cat;
+    > true
+    superoctocat.name // всех клонов зовут "Буэ"
+    > 'Буэ'
+
+<!SLIDE transition=uncover>
+
+    @@@javascript
+    function cat(name) { // динамика
+        this.name = name || 'Маруся'; // своё (новое) имя у каждого клона
+        this.kittens = [];
+    }
+    cat.prototype = { // статика
+        react: function(who) { // одна и та же функция для всех клонов
+	           console.log(this.name + ' реагирует на ' + who); }
+
+    };
+
+    function octocat() {} 
+    octocat.prototype = new cat(); // клонируем...
+    octocat.prototype.constructor = octocat;
+
+    var boo = new octocat();
+    boo.kittens
+    > []
+    var woo = new octocat();
+    woo.kittens.push('Гоша');
+    woo.kittens
+    > ["Гоша"]
+    boo.kittens
+    > ["Гоша"] // Oooopps!!! 
+
+<!SLIDE transition=uncover>
+
+.notes Передаём имя через конструкторы. Совсем правильный вариант.
+
+    @@@javascript
+    function cat(name) { // динамика
+        this.name = name || 'Маруся'; // своё (новое) имя у каждого клона
+        this.kittens = []; // новый массив у каждого клона
+    }
+    cat.prototype = { // статика
+    	react: function(who) { // одна и та же функция для всех клонов
+	           console.log(this.name + ' reacts on ' + who); }
+    };
+
+    function octocat(name) { // функция создания клона a.k.a. конструктор
+	    cat.call(this,name || 'Буэ'); // <---- !!! ВАЖНО
+	    this.tentacles = 6; // динамика
+	}
+    octocat.prototype = new cat('Буэ'); // создаём кошку, которую будем клонировать
+    octocat.prototype.global = ...; // статика
+
+    var superoctocat = new octocat('Чак');
     superoctocat.tentacles = 8;
     superoctocat instanceof cat;
     > true
-    superoctocat.type
+    superoctocat.name
+    > 'Чак'
+
+<!SLIDE transition=uncover>
+
+    @@@javascript
+    var superoctocat = new octocat('Чак');
+
+* Создаётся полностью пустой объект
+* Его прототипом становится экземпляр `cat`, общий для всех экземпляров `octocat`
+* Этот экземпляр расширен другими свойствами, поэтому они тоже переносятся в прототип
+* Вызывается конструктор `octocat()` ()
+* Получившийся объект возвращается и передаётся в `superoctocat`
 
 <!SLIDE transition=uncover>
 
     superoctocat [instance of octocat]
+        { name: 'Чак' }
         octocat.prototype [instance of cat] 
-               { type: 'octocat' }
+                { name: 'Буэ' }
             cat.prototype
                 { react: ... }
                 Object.prototype
@@ -162,13 +253,16 @@
 
 <span class="legal-copy">Modified from http://bonsaiden.github.com/JavaScript-Garden/#object.prototype</span>                
 
-<!SLIDE bullets incremental transition=uncover>
+<!SLIDE transition=uncover>
 
-   Для работы с прототипами нужны:
+Для работы с клонированием нужны:
 
-   * Функция, которая конструирует объект
-   * Прототип (клонируемое), который содержится в сконструированном объекте (или наполняется позже)
-   * Она же становится конструктором
+   * Любая функция, которая конструирует / инициализирует клон: клонировщик
+   * Прототип (клонируемое): любой объект, описывающий методы и свойства, которые должны содержатся в 
+                             каждом новом клоне (могут наполняться позже).
+   * Это один, общий для всех сконструированных экземпляров (и функции), объект                         
+   * Свойство `prototype` у функции – именно этот объект                         
+   * Вызови `new` с этой функцией и получи клон
 
 <!SLIDE transition=uncover>
 
@@ -186,14 +280,16 @@
 
 Но `super` не имеет смысла, если мы *клонируем*
 
+Кто такой `super`?
+
 <!SLIDE bullets incremental transition=uncover>
 
 .notes Именно прикручивание ООП внесло в JS много костылей. Не забывайте оператор `new` и вам не нужно будет костылей
 
-Кстати...
+## Зачем вообще нам наследование, если есть *Duck Typing* ##
 
-* функция – тоже объект с прототипом
-* не забывайте оператор `new`
-* `this` указывает на функцию, если не указано явно
-* в первых двух примерах `instanceof` тоже не работает
-* но зачем нам он вообще, если есть *Duck Typing*
+<!SLIDE transition=uncover>
+
+## Не надо преумножать сущности ##
+
+<!SLIDE transition=uncover>

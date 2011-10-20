@@ -4,13 +4,15 @@
 
 <!SLIDE bullets incremental transition=uncover>
 
-.notes Вы спросите почему?
+.notes Вы спросите почему?.. Редко нужно создавать/копировать сложные объекты
 
-Кроме этого, рекомендую *не использовать* методов в традиционном понимании вообще:
+Польза отказа от методов в пользу функций:
 
-* Проще оперировать экземплярами:
+* Проще оперировать экземплярами
 * Функция будет работать с любыми типами 
 * И требовать от них только то, что нужно ей
+* Можно вообще не наследовать, а создавать объекты на месте, копировать или оборачивать
+* Вообще, можно относиться проще к объектам
 
 <!SLIDE transition=uncover>
 
@@ -75,13 +77,14 @@
     function pullTail(possiblyCat) { // можетКошка
         if (!possiblyCat.tail) throw new Error('Нет хвоста :(');
         console.log((possiblyCat.name ? withTail.name : 'Неизвестный') +
-                    ' говорит «Ай!»');
+                    ' кричит «Ай!»');
     }
 
     pullTail({}); // Нет хвоста!
     pullTail(petya); // Нет хвоста!
-    pullTail(musya); // Муся говорит «Ай!»
-    pullTail(elephant); // Слон говорит «Ай!»
+    pullTail(musya); // Муся кричит «Ай!»
+    pullTail(elephant); // Слонишка кричит «Ай!»
+    pullTail({'tail': 1 }); // Неизвестный кричит «Ай!»
     pullTail(octocat); // Нет хвоста!
 
 <!SLIDE transition=uncover>
@@ -97,7 +100,7 @@
     @@@javascript
     var myChain = { head: null };
     var divOne = { type: 'div', 'next': null };
-    var divTwo = { type: 'table', 'next': null };
+    var divTwo = { type: 'table', 'next': null }; // легко создать новый объект
     divOne.next = divTwo;
     myChain.head = divOne;
 
@@ -115,7 +118,36 @@
 
 <!SLIDE transition=uncover>
 
+# На практике: #
+    
+    @@@javascript
+    var divOne = { type: 'div', 'next': null };
+    var divTwo = { type: 'table', 'next': null }; // легко создать новый объект
+    divOne.next = divTwo;
+    
+    function walk(chain, func) {
+    	var cursor = chain.head;
+    	while (cursor != null) {
+    		func(cursor);
+    		cursor = cursor.next;
+    	}
+    }
+
+    function init_chain(head) {
+    	return { 'head': head };
+    }
+
+    walk(init_chain(divOne), function(elm) { console.log(elm.type) } );
+    > 'div' 
+    > 'table'    
+
+<!SLIDE transition=uncover>
+
 # Кратко! #
+
+<!SLIDE bullets incremental transition=uncover>
+
+# Создавать объекты на месте – нормальная практика #
 
 <!SLIDE transition=uncover>
 
@@ -127,4 +159,6 @@
 
 <!SLIDE transition=uncover>
 
-## Если вы считаете, что пора объединить функции для работы с цепочками (или кошками) в одном месте, вы на верном пути! ##
+.notes Про монады рассказывать не буду
+
+## Если вы считаете, что пора сгруппировать функции для работы с объектами одного типа в одном месте, вы на верном пути! ##
