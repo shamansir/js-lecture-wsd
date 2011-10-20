@@ -43,6 +43,8 @@
     
 <!SLIDE transition=uncover>
 
+.notes: нет require, не асинхронный путь
+
 Эмуляция в браузере:
 
     @@@javascript
