@@ -4,11 +4,15 @@
 
 <!SLIDE transition=uncover>
 
-# Один файл - один объект #
+# Один файл - один внешний объект #
 
 <!SLIDE transition=uncover>
 
-# Один объект - один модуль #
+# Один внешний объект - один модуль #
+
+<!SLIDE transition=uncover>
+
+# Один модуль - одно пространство имён #
 
 <!SLIDE transition=uncover>
 
