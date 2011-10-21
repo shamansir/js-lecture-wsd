@@ -6,11 +6,17 @@
 
 В школе нас учили наследованию...
 
+![Университетская шапка](university-hat.png)
+
+<span class="legal-copy">http://tsdsu.co.uk/files/diploma-and-graduation-hat.jpeg</span>
+
 <!SLIDE transition=uncover>
 
 .notes По сути наследование – почти то же, что классификация [БЫСТРО ПЕРЕКЛЮЧИТЬ]
 
 ![Дерево наследования компонентов](oop-components-tree.png)
+
+<span class="legal-copy">http://img3.sencha.com/files/learn/Ext2-Container-hierarchy.gif</span>
 
 <!SLIDE transition=uncover>
 
@@ -23,6 +29,8 @@
 <!SLIDE transition=uncover>
 
 ![Генеалогическое древо Пушкиных](pushkin-geneology.png)
+
+<span class="legal-copy">http://www.genery.com/sites/all/themes/gen2/images/screen/pushkin.png</span>
 
 <!SLIDE transition=uncover>
 
@@ -68,7 +76,7 @@
     var F = function() { }
     F.prototype = Animal.prototype
     Dog.prototype = new F()
-    Dog.prototype.constructor = Cat
+    Dog.prototype.constructor = Dog
     Dog.superclass = Animal.prototype
 
     var cat = new Cat('Cat');
@@ -86,4 +94,8 @@
 
 <!SLIDE transition=uncover>
 
-Но что, если у нас есть необычное животное?
+Попробуем разобраться в сложном и перейдём к простому
+
+<!SLIDE transition=uncover>
+
+Что, если у нас есть необычное животное?

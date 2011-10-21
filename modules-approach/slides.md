@@ -43,7 +43,7 @@
     
 <!SLIDE transition=uncover>
 
-.notes: нет require, не асинхронный путь
+.notes нет require, не асинхронный путь
 
 Эмуляция в браузере:
 

@@ -8,7 +8,7 @@
 
 ## Кто использует в работе JS? ##
 
-![Египетская рука](egypt-hand.png)
+![Египетская рука](egy_arm.png)
 
 <!SLIDE transition=uncover>
 
@@ -18,7 +18,7 @@
 
 ( Любое ООП )
 
-![Египетская рука](egypt-hand.png) ![Египетская рука](egypt-hand.png)
+![Египетская рука](egy_arm.png) ![Египетская рука](egy_arm.png)
 
 <!SLIDE transition=uncover>
 
@@ -28,13 +28,15 @@
 
 ( Только два слова; и у вас пять секунд на размышление )
 
-![Два египетских рта](egypt-mouths.png)
+![Два египетских рта](egy_oop.png)
 
 <!SLIDE transition=uncover>
 
 Вот что думают об этом японцы:
 
 ![Японцы об ООП в JS](japanese-about-oop-in-js.png)
+
+<span class="legal-copy">Image source: http://lostintransit.org/archives/000772.html. In fact, these men are thinking not about JavaScript, I suppose</span>
 
 <!SLIDE transition=uncover>
 

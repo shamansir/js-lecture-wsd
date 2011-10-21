@@ -8,9 +8,9 @@
 
 ![Осьмикошка](octocat.png)
 
-(okutokettu)
+(タコ猫 / オクトケツ)
 
-<span class="legal-copy">Octocat Logo is the property of GitHub Inc.</a>
+<span class="legal-copy">Octocat is drawn by David OReilly</a>
 
 <!SLIDE transition=uncover>
 
@@ -18,11 +18,15 @@
 
 Или вот такое...
 
-![Собоутка](doggyduck.png)
+![Собоутка](doggyduck.jpg)
 
-(dogudakku)
+(ドッギダック)
+
+<span class="legal-copy">http://api.ning.com/files/XWzZwWqhuPRomBff4H4uwRgDFRP5xMX2YaYZ-eBmoTPYEZfIZddJ4HwYt1-0Ca9CZ6Ph1dkR5-ipAYpSAERdjZTBXA-oRL5L/dogduck.jpg</span>
 
 <!SLIDE bullets incremental transition=uncover>
+
+И что тогда?
 
 * Куда же его в втиснуть в иерархии?
 * ![Странные животные в иерархии](strange-animals-in-hierarchy.png)
@@ -38,7 +42,7 @@
 <!SLIDE transition=uncover>
 
 # Классов нет, есть только экземпляры #
-
+ 
 ![Экземпляры](just-instances.png)
 
 <!SLIDE bullets incremental transition=uncover>
@@ -79,15 +83,15 @@
     
 <!SLIDE transition=uncover>
 
-[Вилка и гнутая вилка](fork-and-modified-fork.png)
+![Вилка и гнутая вилка](fork-and-modified-fork.png)
 
 <!SLIDE transition=uncover>
 
-# Fork and change #
+## Fork and change ##
 
 (UNIX, GitHub, ...)
 
-[Ветви @ Меняй](fork-and-change.png)
+![Ветви @ Меняй](fork-and-change.jpg)
 
 <!SLIDE transition=uncover>
 
