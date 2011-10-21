@@ -1,11 +1,12 @@
-== Слайды / Slides ==
+## Слайды / Slides ##
 
 [Ссылка / Link](https://github.com/shamansir/js-lecture-wsd)
 
+-------
 
-== ООП наследовние / OOP Inheritance ==
+## ООП наследовние / OOP Inheritance ##
 
-=== Русский / Russian ===
+### Русский / Russian ###
 
 * [ООП в JavaScript: Наследование](http://javascript.ru/tutorial/object/inheritance)
 * [Объектно-ориентированный JavaScript](http://designformasters.info/posts/objectifying-javascript/)
@@ -13,7 +14,7 @@
 * [Тонкости ECMA-262-3. Часть 7.1. ООП: Общая теория.](http://dmitrysoshnikov.com/ecmascript/ru-chapter-7-1-oop-general-theory/)
 * [Тонкости ECMA-262-3. Часть 7.2. ООП: Реализация в ECMAScript.](http://dmitrysoshnikov.com/ecmascript/ru-chapter-7-2-oop-ecmascript-implementation/)
 
-=== Английский / English ===
+### Английский / English ###
 
 * [Understanding JavaScript OOP](http://killdream.github.com/blog/2011/10/understanding-javascript-oop/)
 * [JS.Class](http://jsclass.jcoglan.com/) /Library/
@@ -24,16 +25,16 @@
 * [Correct OOP For JavaScript](http://www.coolpage.com/developer/javascript/Correct%20OOP%20for%20Javascript.html)
 
 
-== Прототипы / Prototypes ==
+## Прототипы / Prototypes ##
 
-=== Русский / Russian ===
+### Русский / Russian ###
 
 * [Основы и заблуждения насчет JavaScript](http://habrahabr.ru/blogs/javascript/120193/)
 * [Объектно-ориентированный JavaScript](http://designformasters.info/posts/objectifying-javascript/)
 * [JavaScript Гарден: Великий прототип](http://shamansir.github.com/JavaScript-Garden/#object.prototype)
 * [Наследование в JavaScript](http://hackday.ru/assets/files/JS_inheritance.pdf) /PDF/ (+ Паттерны)
 
-=== Английский / English ===
+### Английский / English ###
 
 * [Understanding JavaScript OOP](http://killdream.github.com/blog/2011/10/understanding-javascript-oop/)
 * [How Prototypal Inheritance really works](http://blog.vjeux.com/2011/javascript/how-prototypal-inheritance-really-works.html)
@@ -42,48 +43,48 @@
 * [JavaScript Garden: The Prototype](http://bonsaiden.github.com/JavaScript-Garden/#object.prototype)
 
 
-== Пространства имён / Namespaces ==
+## Пространства имён / Namespaces ##
 
-=== Русский / Russian ===
+### Русский / Russian ###
 
 :(
 
-=== Английский / English ===
+### Английский / English ###
 
 * [Essential JS Namespacing](http://addyosmani.com/blog/essential-js-namespacing/)
 
 
-== Модули / Modules ==
+## Модули / Modules ##
 
-=== Русский / Russian ===
+### Русский / Russian ###
 
 :(
 
-=== Английский / English ===
+### Английский / English ###
 
 * [CommonJS Modules Spec](http://www.commonjs.org/specs/modules/1.0/)
 * [Require.js](http://requirejs.org/) /Library/ 
 
 
-== Миксины / Mixins ==
+## Миксины / Mixins ##
 
-=== Русский / Russian ===
+### Русский / Russian ###
 
 :(
 
-=== Английский / English ===
+### Английский / English ###
 
 * [A Fresh Look at JavaScript Mixins](http://javascriptweblog.wordpress.com/2011/05/31/a-fresh-look-at-javascript-mixins/)
 * [Trait.js](http://howtonode.org/traitsjs) /Library/
 
 
-== Другое / Other ==
+## Другое / Other ##
 
-=== Русский / Russian ===
+### Русский / Russian ###
 
 :(
 
-=== Английский / English ===
+### Английский / English ###
 
 * [Learn Advanced JavaScript](http://ejohn.org/apps/learn/) /Interactive/
 * [What's a Closure?](http://nathansjslessons.appspot.com/) /Interactive/
