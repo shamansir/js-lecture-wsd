@@ -4,7 +4,7 @@
 
 <!SLIDE transition=uncover>
 
-Например, такое...
+## Например, такое... ##
 
 ![Осьмикошка](octocat.png)
 
@@ -16,7 +16,7 @@
 
 .notes В природе такое встречается редко, но вот когда мы разрабатываем сложную систему, у нас часто появляются сложные компоненты 
 
-Или вот такое...
+## Или вот такое... ##
 
 ![Собоутка](doggyduck.jpg)
 
@@ -24,15 +24,17 @@
 
 <span class="legal-copy">http://api.ning.com/files/XWzZwWqhuPRomBff4H4uwRgDFRP5xMX2YaYZ-eBmoTPYEZfIZddJ4HwYt1-0Ca9CZ6Ph1dkR5-ipAYpSAERdjZTBXA-oRL5L/dogduck.jpg</span>
 
-<!SLIDE bullets incremental transition=uncover>
+<!SLIDE not-fit bullets incremental transition=uncover>
 
-И что тогда?
+# И что тогда? #
 
 * Куда же его в втиснуть в иерархии?
-* ![Странные животные в иерархии](strange-animals-in-hierarchy.png)
+* ![Странные животные в иерархии](oop-animals-tree-not-fit.png)
 * Может и не надо?
 
-<!SLIDE bullets incremental transition=uncover>
+<!SLIDE cloning bullets incremental transition=uncover>
+
+Может...
 
 * Может лучше не наследовать, а *клонировать*?
 * ![Иллюстрация клонирования](cloning-illustration.png)
@@ -45,7 +47,7 @@
  
 ![Экземпляры](just-instances.png)
 
-<!SLIDE bullets incremental transition=uncover>
+<!SLIDE making bullets incremental transition=uncover>
 
 * Нет никаких иерархий
 * Всегда есть образец
@@ -81,9 +83,12 @@
     vasya.greet();
     > 'Я – Вася'
     
-<!SLIDE transition=uncover>
+<!SLIDE forks transition=uncover>
 
 ![Вилка и гнутая вилка](fork-and-modified-fork.png)
+
+<span class="legal-copy">http://www.christofle.com/files/products/02415003-1-612-0-dinner-fork.png;
+http://t2.gstatic.com/images?q=tbn:ANd9GcSkHf8gTj0iRpiZzl3Sdhxwi0gYgd8shxUhelDw7OkPoZfB3fp26HZKx4pd</span>
 
 <!SLIDE transition=uncover>
 

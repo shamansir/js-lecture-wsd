@@ -1,22 +1,48 @@
 body {
 	font-family: 'Droid Sans', 'Gill Sans', Georgia, Helvetica, Arial, sans-serif;
-	padding-bottom: 20px;
-	/* ~ dark gray gradient ~ */
+	padding-bottom: 500px;
+	/* ~ dark gray color ~ */
 	/* background-color: #555555; */
-	/* ~ light yellow gradient ~ */
+	/* ~ light yellow color ~ */
 	/* background-color: #fffddf; */
 	/* ~ gray with diagonals ~ */
 	/* background-color: #ededed;
 	background-image: url(./grey-diagonals.gif); */
 	/* ~ sky-to-sea gradient ~ */
-	background: rgb(8,147,160);
+	/*background: rgb(8,147,160);
     background: -moz-linear-gradient(top, rgba(8,147,160,1) 0%, rgba(32,110,153,1) 50%, rgba(22,91,137,1) 70%, rgba(26,82,124,1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(8,147,160,1)), color-stop(50%,rgba(32,110,153,1)), color-stop(70%,rgba(22,91,137,1)), color-stop(100%,rgba(26,82,124,1)));
     background: -webkit-linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
     background: -o-linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
     background: -ms-linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
     background: linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0893a0', endColorstr='#1a527c',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0893a0', endColorstr='#1a527c',GradientType=0 );*/
+    /* ~ light-gold gradient ~ */
+    background: rgb(229,222,181);
+	background: -moz-linear-gradient(top, rgba(229,222,181,1) 0%, rgba(254,252,234,1) 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,222,181,1)), color-stop(99%,rgba(254,252,234,1)));
+	background: -webkit-linear-gradient(top, rgba(229,222,181,1) 0%,rgba(254,252,234,1) 99%);
+	background: -o-linear-gradient(top, rgba(229,222,181,1) 0%,rgba(254,252,234,1) 99%);
+	background: -ms-linear-gradient(top, rgba(229,222,181,1) 0%,rgba(254,252,234,1) 99%);
+	background: linear-gradient(top, rgba(229,222,181,1) 0%,rgba(254,252,234,1) 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5deb5', endColorstr='#fefcea',GradientType=0 );
+    /* ~ dark blue gradient ~ */
+    /*background: rgb(181,189,200);
+    background: -moz-linear-gradient(top, rgba(181,189,200,1) 0%, rgba(68,110,147,1) 0%, rgba(35,85,137,1) 25%, rgba(40,52,59,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(181,189,200,1)), color-stop(0%,rgba(68,110,147,1)), color-stop(25%,rgba(35,85,137,1)), color-stop(100%,rgba(40,52,59,1)));
+	background: -webkit-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(68,110,147,1) 0%,rgba(35,85,137,1) 25%,rgba(40,52,59,1) 100%);
+	background: -o-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(68,110,147,1) 0%,rgba(35,85,137,1) 25%,rgba(40,52,59,1) 100%);
+	background: -ms-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(68,110,147,1) 0%,rgba(35,85,137,1) 25%,rgba(40,52,59,1) 100%);
+	background: linear-gradient(top, rgba(181,189,200,1) 0%,rgba(68,110,147,1) 0%,rgba(35,85,137,1) 25%,rgba(40,52,59,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 );*/
+}
+
+#preso {
+	top: 60px;
+}
+
+#footer {
+	top: 36px;
 }
 
 .slide {
@@ -44,6 +70,34 @@ body {
 
 .content > ul {
 	font-size: 2em;
+	margin-left: 50px;
+}
+
+.content > ul > li {
+	text-decoration: none;
+	/* list-style-type: none; 
+	list-style-image: url(list-image-target-blue.png); 
+	list-style-position: inside 20px; */
+	list-style-type: none;
+    margin: 0.3em 0 0 0;
+    padding-left: 40px; 
+    background-image: url(list-image-target-blue.png);
+    background-position: 0px 23px;
+    background-repeat: no-repeat;
+}
+
+.bullets > ul {
+	margin-left: 150px;
+}
+
+.bullets > ul > li {
+	text-align: left;
+    list-style-type: none;
+    margin: 0.3em 0 0 0;
+    padding-left: 40px; 
+    background-image: url(list-image-target-blue.png);
+    background-position: 0px 32px;
+    background-repeat: no-repeat;
 }
 
 .content a {
@@ -106,3 +160,31 @@ pre.sh_sourceCode .sh_cbracket {
 pre.sh_sourceCode .sh-type {
 	color: darkgreen;
 }
+
+.small-code pre.sh_sourceCode {
+	font-size: 1em;
+}
+
+.not-fit h1 {
+	top: -22px;
+}
+
+.cloning img {
+	margin-top: -4px;	
+	margin-left: 245px;
+}
+
+.making img {
+	margin-top: -9px;
+	margin-left: 245px;
+}
+
+/* .cloning ul > li {
+	text-align: center;
+} */
+
+/* .cloning ul > li {
+	background-image: none;
+	background-position: 0 0;
+	padding-left: 0;
+} */

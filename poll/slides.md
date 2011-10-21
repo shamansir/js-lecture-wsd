@@ -26,15 +26,17 @@
 
 ## Расскажите, что вы думаете об ООП в JS? ##
 
-( Только два слова; и у вас пять секунд на размышление )
+( Только два слова; У вас пять секунд на размышление )
 
 ![Два египетских рта](egy_oop.png)
 
 <!SLIDE transition=uncover>
 
-Вот что думают об этом японцы:
+Вот что об этом думают японцы:
 
 ![Японцы об ООП в JS](japanese-about-oop-in-js.png)
+
+<sub>– Очень плохо всё с ООП в JavaScript, уважаемый гайдзин!</sub> 
 
 <span class="legal-copy">Image source: http://lostintransit.org/archives/000772.html. In fact, these men are thinking not about JavaScript, I suppose</span>
 

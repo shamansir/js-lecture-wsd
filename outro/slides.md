@@ -59,6 +59,7 @@
 * http://shamansir.github.com
 * shaman.sir@gmail.com
 * Skype: shaman.sir
+* twitter: @shaman_sir
 
 <img src="../js-lecture-literature-qr.png" width="320px" height="320px" />
 
