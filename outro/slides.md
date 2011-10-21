@@ -60,4 +60,6 @@
 * shaman.sir@gmail.com
 * Skype: shaman.sir
 
-2011 (c)
+<img src="../js-lecture-literature-qr.png" width="320px" height="320px" />
+
+2011 ©

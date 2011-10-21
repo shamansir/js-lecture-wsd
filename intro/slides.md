@@ -23,9 +23,7 @@
 
 ![Poolparty](poolparty.gif)
 
-<span class="legal-copy">Poolparty smile is the property of Skype Limited ©</a>
-
-<span class="legal-copy">http://www.patwreck.com/wordpress/wp-content/uploads/2010/04/13d68eccc211e88c0867f1c6a0ef92e986147a71_s.gif</span>
+<span class="legal-copy">Poolparty smile is the property of Skype Limited ©; http://www.patwreck.com/wordpress/wp-content/uploads/2010/04/13d68eccc211e88c0867f1c6a0ef92e986147a71_s.gif</a>
 
 <!SLIDE bullets incremental transition=uncover>
 

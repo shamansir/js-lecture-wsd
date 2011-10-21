@@ -1,0 +1,108 @@
+body {
+	font-family: 'Droid Sans', 'Gill Sans', Georgia, Helvetica, Arial, sans-serif;
+	padding-bottom: 20px;
+	/* ~ dark gray gradient ~ */
+	/* background-color: #555555; */
+	/* ~ light yellow gradient ~ */
+	/* background-color: #fffddf; */
+	/* ~ gray with diagonals ~ */
+	/* background-color: #ededed;
+	background-image: url(./grey-diagonals.gif); */
+	/* ~ sky-to-sea gradient ~ */
+	background: rgb(8,147,160);
+    background: -moz-linear-gradient(top, rgba(8,147,160,1) 0%, rgba(32,110,153,1) 50%, rgba(22,91,137,1) 70%, rgba(26,82,124,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(8,147,160,1)), color-stop(50%,rgba(32,110,153,1)), color-stop(70%,rgba(22,91,137,1)), color-stop(100%,rgba(26,82,124,1)));
+    background: -webkit-linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
+    background: -o-linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
+    background: -ms-linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
+    background: linear-gradient(top, rgba(8,147,160,1) 0%,rgba(32,110,153,1) 50%,rgba(22,91,137,1) 70%,rgba(26,82,124,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0893a0', endColorstr='#1a527c',GradientType=0 );
+}
+
+.slide {
+	color: #003153;
+	background-color: #ffffff;
+	/* -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px; */
+    /* background-color: #fffefa; */
+}
+
+.content h1, .content h2 {
+	text-shadow: 1px 1px 2px #dedede;
+    filter: dropshadow(color=#dedede, offx=1, offy=1);
+}
+
+.content h2 {
+	color: #08457e;
+}
+
+.subsection h1 {
+	background: none repeat scroll 0 0 #08457e;
+	text-shadow: none;
+}
+
+.content > ul {
+	font-size: 2em;
+}
+
+.content a {
+	color: #960018;
+}
+
+.content span.legal-copy {
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	font-size: 12px;
+	color: #666;
+}
+
+pre code,
+pre.sh_sourceCode .sh_string {
+	font-family: 'Andale Mono', 'Droid Sans Mono', Monaco, monospace;
+}
+
+pre.sh_sourceCode {
+	font-size: 1.85em;
+	background-color: #fbfcf2;
+	color: #003153;
+	border-bottom: 20px solid #f3f3f3;
+	padding: 5px;
+}
+
+pre.sh_sourceCode .sh_keyword {
+	font-weight: normal;
+	color: #cc5500;
+}
+
+pre.sh_sourceCode .sh_function {
+	font-weight: normal;
+	color: #960018;
+}
+
+pre.sh_sourceCode .sh_predef_func {
+	font-weight: normal;
+	color: #1a4780;
+}
+
+pre.sh_sourceCode .sh_comment {
+	color: #aaaaaa;
+	font-style: normal;
+}
+
+pre.sh_sourceCode .sh_symbol {
+	color: #806b2a;
+}
+
+pre.sh_sourceCode .sh_string {
+	color: #a5260a;	
+}
+
+pre.sh_sourceCode .sh_cbracket {
+	color: #cfb53b;
+}
+
+pre.sh_sourceCode .sh-type {
+	color: darkgreen;
+}

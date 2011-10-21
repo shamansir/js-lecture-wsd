@@ -46,7 +46,7 @@
 
 ![Дерево наследования животных](oop-animals-tree.png)
 
-<span class="legal-copy">These Emoji are the property of Apple Inc.</a>
+<span class="legal-copy">These Emoji are the property of Apple Inc. ©</a>
 
 <!SLIDE transition=uncover>
 
