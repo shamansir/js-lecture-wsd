@@ -4,7 +4,7 @@
 
 -------
 
-## ООП наследовние / OOP Inheritance ##
+## ООП наследование / OOP Inheritance ##
 
 ### Русский / Russian ###
 
