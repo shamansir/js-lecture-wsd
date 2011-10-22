@@ -15,10 +15,12 @@
     @@@javascript
     var asButton = function() {
       this.hover = function(bool) {
-        bool ? this.classes.push('hover') : this.classes.remove('hover');
+        bool ? this.classes.push('hover') 
+             : this.classes.remove('hover');
       };
       this.press = function(bool) {
-        bool ? this.classes.push('pressed') : this.classes.remove('pressed');
+        bool ? this.classes.push('pressed') 
+             : this.classes.remove('pressed');
       };
       this.fire = function() {
         return this.action();
@@ -35,7 +37,8 @@
     @@@javascript
 	var asOval = function(options) {
 	  this.area = function() { 
-	    return Math.PI * this.longRadius * this.shortRadius;
+	    return Math.PI * this.longRadius 
+	                   * this.shortRadius;
 	  };
 	  this.ratio = function() {
 	    return this.longRadius/this.shortRadius;
@@ -56,7 +59,8 @@
 Овальная кнопка:
 
     @@@javascript
-	var OvalButton = function(longRadius, shortRadius, label, action) {
+	var OvalButton = function(longRadius, shortRadius, 
+		                      label, action) {
 	  this.longRadius = longRadius;
 	  this.shortRadius = shortRadius;
 	  this.label = label;
@@ -71,9 +75,11 @@
 
     @@@javascript
 	asButton.call(OvalButton.prototype);
-	asOval.call(OvalButton.prototype, {growBy: 2, shrinkBy: 2});
+	asOval.call(OvalButton.prototype, 
+		        {growBy: 2, shrinkBy: 2});
 
-	var myButton = new OvalButton(3, 2, 'Нажми!', function() {alert('Он нажал!')});
+	var myButton = new OvalButton(3, 2, 
+		   'Нажми!', function() {alert('Он нажал!')});
 	myButton.area(); //18.84955592153876
 	myButton.grow();
 	myButton.area(); //52.35987755982988

@@ -58,7 +58,9 @@
     } else if (typeof window === "object") {
         window.maths = maths;
     } else {
-        throw new Error("Can't export maths library (no \"module\" nor \"window\" object detected).");
+        throw new Error('Не могу найти библиотеку maths ' +
+                        '(объекты "module" или "window"' +
+                        'не найдены).');
     }
 
 <!SLIDE transition=uncover>

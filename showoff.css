@@ -179,6 +179,19 @@ pre.sh_sourceCode .sh-type {
 	margin-left: 245px;
 }
 
+.protochain pre {
+	font-size: 1.9em;	
+}
+
+/* .contacts ul {
+	font-family: 'Andale Mono', 'Droid Sans Mono', Monaco, monospace;
+	font-size: 1.5em;	
+} */
+
+.contacts .label {
+	color: #660000;
+}
+
 /* .cloning ul > li {
 	text-align: center;
 } */

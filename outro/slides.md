@@ -12,13 +12,14 @@
 
 <!SLIDE transition=uncover>
 
-# Проще не значит путаннее #
+## Проще не значит путаннее ##
 
 (Если вы пишете документацию к функциям)
 
     @@@javascript
     // (other:Number[, yet_another:Number]) → Number
-    // Returns the sum of the object's value with the given Number
+    // Returns the sum of the object's value with 
+    //                              the given Number
     function add(other, yet_another) {
         return this.value + other + (yet_another || 0)
     }
@@ -52,14 +53,14 @@
 
 ![Dart](dart.png)
 
-<!SLIDE transition=uncover>
+<!SLIDE contacts transition=uncover>
 
 ## Спасибо, ваш shaman.sir ##
 
 * http://shamansir.github.com
-* shaman.sir@gmail.com
-* Skype: shaman.sir
-* twitter: @shaman_sir
+* <span class="label">e-mail:</span> shaman.sir@gmail.com
+* <span class="label">skype</span>: shaman.sir
+* <span class="label">twitter</span>: @shaman_sir
 
 <img src="../js-lecture-literature-qr.png" width="320px" height="320px" />
 

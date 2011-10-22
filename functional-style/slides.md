@@ -30,14 +30,15 @@
 
 .notes Без IDE можно забыть интерфейс, нужно их все держать в памяти, лишние классы, делать интерфейс для каждого отдельного метода довольно странно, обычно это наборы методов 
 
-# Интерфейсы в Java #
+
 
     @@@java
     public interface CanMeow { // МожетМяукать
     	void meow(); // мяукнуть
     }	
 
-    public interface IsCat extends CanMeow { // ЯвляетсяКошкой
+    public interface IsCat extends CanMeow { 
+	                            // ЯвляетсяКошкой
         void pullTail(); // дёрнутьХвост
     }
 
@@ -56,18 +57,20 @@
 
     @@@javascript
     function doMeow(mayBeCanMeow) { // можетУмеетМяукать
-    	if (!mayBeCanMeow.meow) { // mayBeCanMeow.meow !== undefined
+    	if (!mayBeCanMeow.meow) { 
+	    	// mayBeCanMeow.meow !== undefined
     		throw new Error('Не умеет мяукать :(');
-    	} 
-    	// в случае функций можно даже обойтись без проверки
+    	}
     	mayBeCanMeow.meow();
     }
 
     doMeow({}); // Не умеет мяукать!
     doMeow(petya); // Не умеет мяукать!
-    doMeow({'meow': function() { console.log('Мяу!'); } }); // Мяу!
+    doMeow({'meow': function() 
+                    { console.log('Мяу!'); } }); // Мяу!
     doMeow(octocat); // Мяу!
-    doMeow(elephantWhoCanMeow); // слонУмеющийМяукать: Мяу!
+    doMeow(elephantWhoCanMeow); 
+                     // слонУмеющийМяукать: Мяу!
 
 <!SLIDE transition=uncover>
 
@@ -75,8 +78,13 @@
 
     @@@javascript
     function pullTail(possiblyCat) { // можетКошка
-        if (!possiblyCat.tail) throw new Error('Нет хвоста :(');
-        console.log((possiblyCat.name ? withTail.name : 'Неизвестный') +
+        if (!possiblyCat.tail) { 
+	        // possiblyCat.tail !== undefined
+	        throw new Error('Нет хвоста :(');
+	    }
+        console.log((possiblyCat.name 
+	                 ? withTail.name 
+	                 : 'Неизвестный') +
                     ' кричит «Ай!»');
     }
 
@@ -95,12 +103,14 @@
 
 <!SLIDE transition=uncover>
 
+.notes Легко создать новый объект
+
 # На практике: #
     
     @@@javascript
     var myChain = { head: null };
     var divOne = { type: 'div', 'next': null };
-    var divTwo = { type: 'table', 'next': null }; // легко создать новый объект
+    var divTwo = { type: 'table', 'next': null };
     divOne.next = divTwo;
     myChain.head = divOne;
 
@@ -112,17 +122,19 @@
     	}
     }
 
-    walk(myChain, function(elm) { console.log(elm.type) } );
-    > 'div' 
+    walk(myChain, function(elm) 
+    > 'div'               { console.log(elm.type) } );
     > 'table'
 
 <!SLIDE transition=uncover>
+
+.notes Легко создать новый объект
 
 # На практике: #
     
     @@@javascript
     var divOne = { type: 'div', 'next': null };
-    var divTwo = { type: 'table', 'next': null }; // легко создать новый объект
+    var divTwo = { type: 'table', 'next': null };
     divOne.next = divTwo;
     
     function walk(chain, func) {
@@ -137,8 +149,8 @@
     	return { 'head': head };
     }
 
-    walk(init_chain(divOne), function(elm) { console.log(elm.type) } );
-    > 'div' 
+    walk(init_chain(divOne), function(elm) 
+    > 'div'                  { console.log(elm.type) } );
     > 'table'    
 
 <!SLIDE transition=uncover>
