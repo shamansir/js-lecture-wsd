@@ -196,7 +196,7 @@ function showSlide(back_step) {
 		$('#preso').css({'width' : '100%', 'overflow' : 'visible'});
 		currentSlide.css({'width' : '100%', 'text-align' : 'center', 'overflow' : 'visible'});
 	} else {
-          $('#preso').css({'width' : '1020px', 'overflow': 'hidden'});
+                currentSlide.css({'width' : '100%', 'overflow': 'hidden'});
 	}
 
 	percent = getSlidePercent()

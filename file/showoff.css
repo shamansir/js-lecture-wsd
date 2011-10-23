@@ -1,6 +1,6 @@
 body {
 	font-family: 'Droid Sans', 'Gill Sans', Georgia, Helvetica, Arial, sans-serif;
-	padding-bottom: 500px;
+	padding-bottom: 400px;
 	/* ~ dark gray color ~ */
 	/* background-color: #555555; */
 	/* ~ light yellow color ~ */
@@ -118,7 +118,7 @@ pre.sh_sourceCode .sh_string {
 }
 
 pre.sh_sourceCode {
-	font-size: 1.85em;
+	font-size: 1.80em;
 	background-color: #fbfcf2;
 	color: #003153;
 	border-bottom: 20px solid #f3f3f3;
@@ -201,3 +201,122 @@ pre.sh_sourceCode .sh-type {
 	background-position: 0 0;
 	padding-left: 0;
 } */
+
+/* FS: 1440x900;
+   MAX: 1440x874 / 1440x802;
+        1344x840
+        1280x800
+        1280x768
+        1152x720
+        1024x768
+        1024x640
+        800x600 */
+
+@media screen and (min-width: 1400px) and (min-height: 850px) {
+	#preso {
+		top: 60px;
+		width: 1024px;
+		height: 768px;
+	}
+
+	.slide {
+		width: 1024px;
+		height: 728px;
+	} 
+
+	body {
+		padding-bottom: 450px;
+	}
+}
+
+@media screen and (min-width: 1199px) and (min-height: 799px) {
+	#preso {
+		top: 15px;
+		width: 1024px;
+		height: 768px;
+	}
+
+	.slide {
+		width: 1024px;
+		height: 728px;
+	}
+
+	body {
+		padding-bottom: 100px;
+	}
+}
+
+@media screen and (min-width: 1023px) and (min-height: 727px) {
+	#preso {
+		top: 0;
+		width: 1024px;
+		height: 728px;
+	}
+
+	.slide {
+		width: 1024px;
+		height: 728px;
+	}
+
+	body {
+		padding-bottom: 50px;
+	}
+
+	#footer {
+		top: -24px;
+	}
+}
+
+@media screen and (min-width: 799px) and (min-height: 599px) {
+
+	#preso {
+		top: 0;
+		width: 800px;
+		height: 600px;
+	}
+
+	.slide {
+		width: 800px;
+		height: 600px;
+	}
+
+	body {
+		margin-bottom: 200px;
+		padding-bottom: 0;
+	}
+
+	#footer {
+		top: -24px;
+		width: 790px;
+	}
+
+	h1 {
+		font-size: 3em;
+		margin: 0.3em 0;
+	}
+
+	h2, h3, h4 {
+		font-size: 2.0em;
+	}
+
+	.content > ul {
+		font-size: 1.5em;
+	}
+
+	.content {
+		font-size: 0.9em;
+	}
+
+	pre.sh_sourceCode {
+		font-size: 1.5em;
+	}
+
+	.content > ul > li {
+		background-position: 0 12px;
+	}
+
+	.bullets > ul > li {
+		background-position: 0 25px;
+	}
+		
+}
