@@ -1,6 +1,6 @@
 ## Слайды / Slides ##
 
-[Ссылка / Link](https://github.com/shamansir/js-lecture-wsd)
+[Ссылка / Link](http://shamansir.github.com/js-lecture-wsd)
 
 -------
 
