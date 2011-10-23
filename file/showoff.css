@@ -245,6 +245,10 @@ pre.sh_sourceCode .sh-type {
 	body {
 		padding-bottom: 100px;
 	}
+
+	#footer {
+		top: -9px;
+	}
 }
 
 @media screen and (min-width: 1023px) and (min-height: 727px)

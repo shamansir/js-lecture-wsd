@@ -2,41 +2,43 @@
 
 var ShowOff = {};
 
-var preso_started = false
-var slidenum = 0
-var slideTotal = 0
-var slides
-var currentSlide
-var totalslides = 0
-var slidesLoaded = false
-var incrSteps = 0
-var incrElem
-var incrCurr = 0
-var incrCode = false
-var debugMode = false
-var gotoSlidenum = 0
-var shiftKeyActive = false
+var preso_started = false;
+var slidenum = 0;
+var slideTotal = 0;
+var slides;
+var currentSlide;
+var totalslides = 0;
+var slidesLoaded = false;
+var incrSteps = 0;
+var incrElem;
+var incrCurr = 0;
+var incrCode = false;
+var debugMode = false;
+var gotoSlidenum = 0;
+var shiftKeyActive = false;
 
-var loadSlidesBool
-var loadSlidesPrefix
+var loadSlidesBool;
+var loadSlidesPrefix;
 
 function setupPreso(load_slides, prefix) {
 	if (preso_started)
 	{
-		alert("already started")
-		return
+		alert("already started");
+		return;
 	}
-	preso_started = true
+	preso_started = true;
 
-	loadSlidesBool = load_slides
-	loadSlidesPrefix = prefix
-	loadSlides(loadSlidesBool, loadSlidesPrefix)
+	loadSlidesBool = load_slides;
+	loadSlidesPrefix = prefix;
+	$(window).load(function() {
+             loadSlides(loadSlidesBool, loadSlidesPrefix);
+        });
 
 	doDebugStuff()
 
 	// bind event handlers
-	document.onkeydown = keyDown
-	document.onkeyup = keyUp
+	document.onkeydown = keyDown;
+	document.onkeyup = keyUp;
 	/* window.onresize	= resized; */
 	/* window.onscroll = scrolled; */
 	/* window.onunload = unloaded; */
@@ -50,16 +52,16 @@ function setupPreso(load_slides, prefix) {
 function loadSlides(load_slides, prefix) {
 	//load slides offscreen, wait for images and then initialize
 	if (load_slides) {
-		$("#slides").load("slides", false, function(){
-			$("#slides img").batchImageLoad({
-			loadingCompleteCallback: initializePresentation(prefix)
-		})
-		})
+	    $("#slides").load("slides", false, function(){
+		$("#slides").find("img").batchImageLoad({
+		    loadingCompleteCallback: initializePresentation(prefix)
+	        });
+	    });
 	} else {
-	$("#slides img").batchImageLoad({
+	    $("#slides).find(img").batchImageLoad({
 		loadingCompleteCallback: initializePresentation(prefix)
-	})
-	}
+	    });
+	};
 }
 
 function initializePresentation(prefix) {
@@ -67,20 +69,20 @@ function initializePresentation(prefix) {
   $("#slides").show();
 
 	//center slides offscreen
-	centerSlides($('#slides > .slide'))
+	centerSlides($('#slides > .slide'));
 
 	//copy into presentation area
-	$("#preso").empty()
-	$('#slides > .slide').appendTo($("#preso"))
+	$("#preso").empty();
+	$('#slides > .slide').appendTo($("#preso"));
 
 	//populate vars
-	slides = $('#preso > .slide')
-	slideTotal = slides.size()
+	slides = $('#preso > .slide');
+	slideTotal = slides.size();
 
 	//setup manual jquery cycle
 	$('#preso').cycle({
 		timeout: 0
-	})
+	});
 
 	setupMenu()
 	if (slidesLoaded) {
@@ -90,23 +92,25 @@ function initializePresentation(prefix) {
 		slidesLoaded = true
 	}
 	setupSlideParamsCheck();
-	sh_highlightDocument(prefix+'/js/sh_lang/', '.min.js')
+	sh_highlightDocument(prefix+'/js/sh_lang/', '.min.js');
 	$("#preso").trigger("showoff:loaded");
 }
 
 function centerSlides(slides) {
 	slides.each(function(s, slide) {
-		centerSlide(slide)
-	})
+                console.log(s);
+		centerSlide(slide);
+	});
 }
 
 function centerSlide(slide) {
-	var slide_content = $(slide).children(".content").first()
-	var height = slide_content.height()
-	var mar_top = (0.5 * parseFloat($(slide).height())) - (0.5 * parseFloat(height))
+	var slide_content = $(slide).children(".content").first();
+	var height = slide_content.height();
+	var mar_top = (0.5 * parseFloat($(slide).height())) - (0.5 * parseFloat(height));
+        console.log(mar_top, $(slide).height(), height, (0.5 * parseFloat($(slide).height())) - (0.5 * parseFloat(height)));
 	if (mar_top < 0) {
 		mar_top = 0
-	}
+	};
 	slide_content.css('margin-top', mar_top)
 }
 
