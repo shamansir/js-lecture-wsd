@@ -221,7 +221,7 @@ pre.sh_sourceCode .sh-type {
 
 	.slide {
 		width: 1024px;
-		height: 728px;
+		height: 768px;
 	} 
 
 	body {
@@ -229,7 +229,8 @@ pre.sh_sourceCode .sh-type {
 	}
 }
 
-@media screen and (min-width: 1199px) and (min-height: 799px) {
+@media screen and (min-width: 1199px) and (min-height: 799px)
+              and (max-width: 1400px) and (max-height: 850px) {
 	#preso {
 		top: 15px;
 		width: 1024px;
@@ -238,7 +239,7 @@ pre.sh_sourceCode .sh-type {
 
 	.slide {
 		width: 1024px;
-		height: 728px;
+		height: 768px;
 	}
 
 	body {
@@ -246,7 +247,8 @@ pre.sh_sourceCode .sh-type {
 	}
 }
 
-@media screen and (min-width: 1023px) and (min-height: 727px) {
+@media screen and (min-width: 1023px) and (min-height: 727px)
+              and (max-width: 1199px) and (max-height: 799px) {
 	#preso {
 		top: 0;
 		width: 1024px;
@@ -267,7 +269,8 @@ pre.sh_sourceCode .sh-type {
 	}
 }
 
-@media screen and (min-width: 799px) and (min-height: 599px) {
+@media screen and (min-width: 799px) and (min-height: 599px)
+              and (max-width: 1023px) and (max-height: 727px) {
 
 	#preso {
 		top: 0;
