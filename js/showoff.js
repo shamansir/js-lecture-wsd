@@ -98,7 +98,6 @@ function initializePresentation(prefix) {
 
 function centerSlides(slides) {
 	slides.each(function(s, slide) {
-                console.log(s);
 		centerSlide(slide);
 	});
 }
@@ -107,7 +106,6 @@ function centerSlide(slide) {
 	var slide_content = $(slide).children(".content").first();
 	var height = slide_content.height();
 	var mar_top = (0.5 * parseFloat($(slide).height())) - (0.5 * parseFloat(height));
-        console.log(mar_top, $(slide).height(), height, (0.5 * parseFloat($(slide).height())) - (0.5 * parseFloat(height)));
 	if (mar_top < 0) {
 		mar_top = 0
 	};
