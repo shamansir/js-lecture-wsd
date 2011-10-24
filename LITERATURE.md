@@ -62,6 +62,7 @@
 
 ### Английский / English ###
 
+* [Choosing JavaSript Module Dependency Syntax](http://blog.calyptus.eu/seb/2011/10/choosing-a-javascript-module-syntax/)
 * [CommonJS Modules Spec](http://www.commonjs.org/specs/modules/1.0/)
 * [Require.js](http://requirejs.org/) /Library/ 
 
