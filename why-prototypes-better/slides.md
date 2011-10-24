@@ -65,7 +65,7 @@
 
 <!SLIDE transition=uncover>
 
-# TIMTOWTDY #
+# TIMTOWTDI #
 
 (Есть больше одного способа сделать это)
 
