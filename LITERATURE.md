@@ -40,6 +40,7 @@
 * [How Prototypal Inheritance really works](http://blog.vjeux.com/2011/javascript/how-prototypal-inheritance-really-works.html)
 * [JavaScript Prototype Inheritance](http://stackoverflow.com/questions/892595/javascript-prototype-inheritance) /StackOverflow/
 * [Prototypes in JavaScript](http://www.spheredev.org/wiki/Prototypes_in_JavaScript)
+* [JavaScript: 5 Ways To Call a Function](http://devlicio.us/blogs/sergio_pereira/archive/2009/02/09/javascript-5-ways-to-call-a-function.aspx)
 * [JavaScript Garden: The Prototype](http://bonsaiden.github.com/JavaScript-Garden/#object.prototype)
 
 
