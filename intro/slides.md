@@ -7,7 +7,7 @@
 
 ![JS-Sparta](./js-sparta.png)
 
-<span class="wsd-copy">WebStandardsDays, 2011 ©</sub>
+<span class="wsd-copy">&lt; e-legion, 2011 &gt;</sub>
 
 <!SLIDE transition=uncover>
 .notes 1. В блоге пишу о разном-упоротом. 2. Можете обзывать так друзей 3. Написал добрую половину жаваскрипта для фотохостинга Nikon, использую его в работе и just for fun лет шесть. И ещё я пишу на Java, но не говорите никому об этом.
