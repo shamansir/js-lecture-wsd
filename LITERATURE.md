@@ -88,7 +88,7 @@
 ### Английский / English ###
 
 * [Translation from Haskell to JavaScript of selected portions of the best introduction to monads I’ve ever read](http://blog.jcoglan.com/2011/03/05/translation-from-haskell-to-javascript-of-selected-portions-of-the-best-introduction-to-monads-ive-ever-read/)
-* [http://igstan.ro/posts/2011-05-02-understanding-monads-with-javascript.html](http://igstan.ro/posts/2011-05-02-understanding-monads-with-javascript.html)
+* [Understanding Monads With JavaScript](http://igstan.ro/posts/2011-05-02-understanding-monads-with-javascript.html)
 
 ## Другое / Other ##
 
