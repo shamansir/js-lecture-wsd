@@ -44,7 +44,7 @@
 * [JavaScript Garden: The Prototype](http://bonsaiden.github.com/JavaScript-Garden/#object.prototype)
 
 
-## Пространства имён / Namespaces ##
+## Пространства имён и области видимости / Namespaces and Scopes ##
 
 ### Русский / Russian ###
 
@@ -53,7 +53,13 @@
 ### Английский / English ###
 
 * [Essential JS Namespacing](http://addyosmani.com/blog/essential-js-namespacing/)
-
+* [JavaScript Scoping and Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting)
+* [Mythical Methods](http://blog.niftysnippets.org/2008/03/mythical-methods.html)
+* [Functions and Execution Contexts in JavaScript](http://blog.tuenti.com/dev/functions-and-execution-contexts-in-javascript-2/)
+* [Faking Context In Javascript's Function() Constructor](http://www.bennadel.com/blog/1927-Faking-Context-In-Javascript-s-Function-Constructor.htm)
+* [Using The WITH Keyword With Javascript's Function() Constructor](http://www.bennadel.com/blog/1929-Using-The-WITH-Keyword-With-Javascript-s-Function-Constructor.htm)
+* [Thoughts on mixing in some object as arguments for external functions w/o using this](http://stackoverflow.com/q/9192950/167262)
+* [Sugarless - A Functional & Context Oriented way to write JavaScript](http://laktek.com/2011/12/21/introducing-sugarless/)
 
 ## Модули / Modules ##
 
@@ -89,6 +95,9 @@
 
 * [Translation from Haskell to JavaScript of selected portions of the best introduction to monads I’ve ever read](http://blog.jcoglan.com/2011/03/05/translation-from-haskell-to-javascript-of-selected-portions-of-the-best-introduction-to-monads-ive-ever-read/)
 * [Understanding Monads With JavaScript](http://igstan.ro/posts/2011-05-02-understanding-monads-with-javascript.html)
+* [dojo.Deferred is a Monad](http://matthew.yumptious.com/2009/04/javascript/dojo-deferred-is-a-monad/)
+* [Promises are the monad of asynchronous programming](http://blog.jcoglan.com/2011/03/11/promises-are-the-monad-of-asynchronous-programming/)
+* [Conjuring JQuery Deferred with monadic incantations](http://stackoverflow.com/questions/5569805/conjuring-jquery-deferred-with-monadic-incantations)
 
 ## Другое / Other ##
 
