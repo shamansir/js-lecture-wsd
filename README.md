@@ -1,4 +1,4 @@
-Powered with [showoff](https://github.com/schacon/showoff)
+(Powered with [showoff](https://github.com/schacon/showoff).)
 
 Правильный JavaScript, слайды доклада:
 
